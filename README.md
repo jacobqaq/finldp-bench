@@ -14,7 +14,7 @@ FinLDP-Bench focuses on financial analyst report generation, where each sample i
 | **Cotton** | 10,000 | 30,000 | Cotton futures research reports | CMB Futures Co., Ltd. |
 | **ETF** | 10,000 | 30,000 | ETF weekly reports | Maigao Securities Co., Ltd. |
 | **Macro** | 10,000 | 30,000 | Macro research reports | Ping An Securities Co., Ltd. |
-| **Nonferrous** | 10,000 | 30,000 | Non-ferrous metals research reports | Soochow Securities Co., Ltd. |
+| **Precious Metals** | 10,000 | 30,000 | Precious metals research reports | Soochow Securities Co., Ltd. |
 
 Each `case_*.csv` file contains multiple reports from the same vertical. These reports can be used as sample documents for learning reusable writing logic and as references for evaluating generated reports.
 
@@ -37,7 +37,7 @@ FinLDP-Bench/
 │   └── data/
 ├── Macro/
 │   └── data/
-└── Nonferrous/
+└── Precious_Metals/
     └── data/
 ```
 
@@ -81,7 +81,7 @@ For the LogicRAG implementation, each `case_*.csv` file can be passed to the doc
 
 ```powershell
 python document_learner.py `
-  --csv "dataset\Nonferrous\data\case_2253.csv" `
+  --csv "dataset\Precious_Metals\data\case_2253.csv" `
   --row-a 0 `
   --row-b 1 `
   --output-dir "logicrag_outputs"
